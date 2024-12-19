@@ -1,17 +1,11 @@
 package example.cashcard.dtos.request;
 
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@ToString
 public class CreateEmployeeRequest {
-    @Id
     private Long employeeId;
     private String firstName;
     private String lastName;

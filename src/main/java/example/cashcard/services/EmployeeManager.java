@@ -21,8 +21,9 @@ public class EmployeeManager implements EmployeeService {
 
     @Override
     public CreateEmployeeResponse createEmployee(CreateEmployeeRequest createRequest) {
-        findEmployee(createRequest.getEmployeeId());
+        //findEmployee(createRequest.getEmployeeId());
         Employee employee = new Employee();
+        employee.setEmployeeId(createRequest.getEmployeeId());
         employee.setFirstName(createRequest.getFirstName());
         employee.setLastName(createRequest.getLastName());
         employee.setEmail(createRequest.getEmail());
